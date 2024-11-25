@@ -173,7 +173,7 @@ Log.Logger = new LoggerConfiguration()
     {
         transport.Authentication(new BasicAuthentication("elastic", "changeme")); // Basic Auth
     })
-    .Enrich.WithProperty("Environment", builder.Environment.ToString())
+    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
     .ReadFrom.Configuration(builder.Configuration)
     .CreateLogger();
 ```
@@ -189,8 +189,11 @@ Log.Logger = new LoggerConfiguration()
 ```csharp
 public void OnGet()
 {
-   _logger.LogInformation("Sample log");
+    var myName = "..."; // ваше имя
+   _logger.LogInformation("Sample log. My name is {MyName}", myName);
 }
 ```
 
 Запусти приложение, открой главную, после чего убедись с помощью поиска в Kibana, что твой лог записался.
+Проверь, что среди свойств записи есть поле MyName со значением, которое было задано в переменной `myName`.
+Так добавляются новые свойства в логи.
