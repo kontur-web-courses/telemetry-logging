@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Elastic.Channels;
 using Elastic.Ingest.Elasticsearch;
 using Elastic.Ingest.Elasticsearch.DataStreams;
@@ -7,10 +8,11 @@ using Serilog;
 
 
 var builder = WebApplication.CreateBuilder(args);
+Serilog.Debugging.SelfLog.Enable(msg => Debug.WriteLine(msg));
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
-    .WriteTo.File(".logs/start-host-log-.txt", rollingInterval: RollingInterval.Day)
-    .WriteTo.Elasticsearch([new Uri("http://localhost:9200")], opts =>
+    // .WriteTo.Console()
+    // .WriteTo.File(".logs/start-host-log-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.Elasticsearch(new List<Uri>{new Uri("http://localhost:9200")}, opts =>
     {
         opts.DataStream = new DataStreamName("logs", "telemetry-logging", "demo");
         opts.BootstrapMethod = BootstrapMethod.Failure;
@@ -24,6 +26,7 @@ Log.Logger = new LoggerConfiguration()
     }, transport =>
     {
         transport.Authentication(new BasicAuthentication("elastic", "changeme")); // Basic Auth
+        transport.OnRequestCompleted(d => Console.WriteLine($"es-req: {d.DebugInformation}"));
     })
     .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
     .ReadFrom.Configuration(builder.Configuration)
@@ -36,8 +39,7 @@ try
 
     builder.Host.UseSerilog();
 
-    builder.Services.AddSerilog((hostingContext, loggerConfiguration) =>
-        loggerConfiguration.ReadFrom.Configuration(builder.Configuration));
+    builder.Services.AddSerilog(Log.Logger);
 
     var app = builder.Build();
 
