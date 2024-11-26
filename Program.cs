@@ -5,6 +5,12 @@ using Elastic.Serilog.Sinks;
 using Elastic.Transport;
 using Serilog;
 
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(".logs/start-host-log-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.Console()
+    .CreateBootstrapLogger();
+
 try
 {
     var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +18,10 @@ try
     // Add services to the container.
     builder.Services.AddRazorPages();
 
-    Log.Logger = new LoggerConfiguration()
+
+    builder.Host.UseSerilog();
+
+    builder.Services.AddSerilog((services, loggerConfiguration) => loggerConfiguration
         .Enrich.FromLogContext()
         .WriteTo.Elasticsearch([new Uri("http://localhost:9200")], opts =>
         {
@@ -30,13 +39,7 @@ try
             transport.Authentication(new BasicAuthentication("elastic", "changeme")); // Basic Auth
         })
         .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
-        .ReadFrom.Configuration(builder.Configuration)
-        .CreateLogger();
-
-
-    builder.Host.UseSerilog();
-
-    builder.Services.AddSerilog(Log.Logger);
+        .ReadFrom.Configuration(builder.Configuration));
 
     var app = builder.Build();
 
@@ -63,8 +66,6 @@ try
 }
 catch (Exception ex)
 {
-    Log.Logger = new LoggerConfiguration().WriteTo
-        .File(".logs/start-host-log-.txt", rollingInterval: RollingInterval.Day).CreateLogger();
-    Log.Logger.Fatal(ex.Message);
+    Log.Logger.Fatal(ex, "Unhandled exception");
     throw;
 }
