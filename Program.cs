@@ -1,26 +1,42 @@
+using Elastic.Channels;
+using Elastic.Ingest.Elasticsearch;
+using Elastic.Ingest.Elasticsearch.DataStreams;
+using Elastic.Serilog.Sinks;
+using Elastic.Transport;
 using Serilog;
-using Serilog.Events;
 
+
+var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration()
+             .Enrich.FromLogContext()
              .WriteTo.Console()
-             .WriteTo.File(".logs/start-host-log-.txt",
-                           LogEventLevel.Error,
-                           rollingInterval: RollingInterval.Day,
-                           rollOnFileSizeLimit: true)
+             .WriteTo.Elasticsearch([new Uri("http://localhost:9200")], opts =>
+             {
+                 opts.DataStream = new DataStreamName("logs", "telemetry-logging", "demo");
+                 opts.BootstrapMethod = BootstrapMethod.Failure;
+                 opts.ConfigureChannel = channelOpts =>
+                 {
+                     channelOpts.BufferOptions = new BufferOptions
+                     {
+                         ExportMaxConcurrency = 10
+                     };
+                 };
+             }, transport =>
+             {
+                 transport.Authentication(new BasicAuthentication("elastic", "changeme")); // Basic Auth
+             })
+             .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
+             .ReadFrom.Configuration(builder.Configuration)
              .CreateLogger();
 
 try
 {
-    var builder = WebApplication.CreateBuilder(args);
-
     // Add services to the container.
     builder.Services.AddRazorPages();
 
     builder.Host.UseSerilog();
 
-    builder.Services.AddSerilog((_, loggerConfiguration) =>
-                                    loggerConfiguration.ReadFrom.Configuration(builder.Configuration));
-
+    builder.Services.AddSerilog(Log.Logger);
     var app = builder.Build();
 
 
