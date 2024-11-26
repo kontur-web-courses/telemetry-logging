@@ -7,14 +7,13 @@ using Serilog;
 using Serilog.Events;
 
 
+string logFilePath = Path.Combine(".logs", $"start-host-log-{DateTime.Now:yyyy-MM-dd}.txt");
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File(logFilePath, LogEventLevel.Error)
+    .WriteTo.Console()
+    .CreateLogger();
 
-
-// string logFilePath = Path.Combine(".logs", $"start-host-log-{DateTime.Now:yyyy-MM-dd}.txt");
-// Log.Logger = new LoggerConfiguration()
-//
-//         .CreateLogger();
-//
-// Log.Information($"Starting application. Logging to: {logFilePath}");
+Log.Information($"Starting application. Logging to: {logFilePath}");
 
 try {  
     var builder = WebApplication.CreateBuilder(args);
@@ -24,7 +23,6 @@ try {
     builder.Host.UseSerilog();
 
     Log.Logger = new LoggerConfiguration()
-        // .WriteTo.File(logFilePath, LogEventLevel.Error) 
         .WriteTo.Console()
         .Enrich.FromLogContext()
         .WriteTo.Elasticsearch(new []{ new Uri("http://localhost:9200")}, opts =>
