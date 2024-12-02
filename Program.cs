@@ -65,4 +65,5 @@ try
 catch (Exception e)
 {
     Log.Error(e.Message);
+	throw;
 }
