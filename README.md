@@ -119,7 +119,14 @@ Serilog можно конфигурировать через код, но зде
 но все равно было бы неплохо зафиксировать что-то в логах.
 А значит логирование надо сконфигурировать хотя бы минимальным образом еще до чтения конфигурации.
 
-Оберни конфигурациию, создание и запуск приложения в try-catch и воспользуйся объектов `Log` для логирования.
+Оберни конфигурациию, создание и запуск приложения в try-catch и воспользуйся объектов `Log` для логирования. Добавь к нему
+логирование в файл:
+```csharp
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/start-host-log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+```
 Теперь будет залогировано любое необработанное исключение, из-за которого упадет весь хост.
 Но важно, что здесь до построения хоста добавляется логирование в `.logs/start-host-log-{current-date}.txt`.
 Благодаря этому, если до обычного конфигурирования логирования произойдет исключение,
@@ -154,13 +161,14 @@ Password: changeme
 ### 3. Serilog + ELK
 Теперь настроим отправку логов из нашего приложения в ELK.
 
-Добавь к настройке лога следующий код:
+Установи пакет Elastic.Serilog.Sinks.
+
+Добавь к настройке лога внутри `AddSerilog` примерн следующий код:
 ```csharp
-Log.Logger = new LoggerConfiguration()
-    .Enrich.FromLogContext()
+builder.Services.AddSerilog((_, lc) => lc.Enrich.FromLogContext()
     .WriteTo.Elasticsearch([new Uri("http://localhost:9200")], opts =>
     {
-        opts.DataStream = new DataStreamName("logs", "telemetry-logging", "demo");
+        opts.DataStream = new DataStreamName("logs", "telemetry-loggin", "demo");
         opts.BootstrapMethod = BootstrapMethod.Failure;
         opts.ConfigureChannel = channelOpts =>
         {
@@ -172,12 +180,19 @@ Log.Logger = new LoggerConfiguration()
     }, transport =>
     {
         transport.Authentication(new BasicAuthentication("elastic", "changeme")); // Basic Auth
+        // transport.Authentication(new ApiKey(base64EncodedApiKey)); // ApiKey
+        transport.OnRequestCompleted(d => Console.WriteLine($"es-req: {d.DebugInformation}"));
     })
     .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
-    .ReadFrom.Configuration(builder.Configuration)
-    .CreateLogger();
+    .ReadFrom.Configuration(builder.Configuration));
+
 ```
 Подробнее про конфигурацию "трубы" до ELK можно прочитать [здесь](https://www.elastic.co/guide/en/ecs-logging/dotnet/current/serilog-data-shipper.html).
+
+Замени `builder.Services.AddSerilog(...)` на
+```csharp
+builder.Services.AddSerilog(Log.Logger);
+```
 
 Теперь запусти приложение, потыкай по ссылкам. Проверь, что логирование в консоль не сломалось!
 Открой Kibana, нажми на "бургер-меню" (три полоски слева) -> Analytics -> Discover. Проверь, что там есть твои логи.
