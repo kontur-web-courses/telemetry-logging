@@ -44,7 +44,7 @@ Log.Logger = new LoggerConfiguration()
 builder.Host.UseSerilog();
 
 builder.Services.AddSerilog((hostingContext, loggerConfiguration) =>
-            loggerConfiguration.ReadFrom.Configuration(hostingContext.Configuration));
+        loggerConfiguration.ReadFrom.Configuration(hostingContext.GetRequiredService<IConfiguration>()));
 ```
 Serilog можно конфигурировать через код, но здесь для конфигурации используется `IConfiguration` хоста,
 которая собирается стандартным образом.
