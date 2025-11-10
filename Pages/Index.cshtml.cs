@@ -7,13 +7,11 @@ public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
 
-    public IndexModel(ILogger<IndexModel> logger)
-    {
-        _logger = logger;
-    }
+    public IndexModel(ILogger<IndexModel> logger) => _logger = logger;
 
     public void OnGet()
     {
-
+        var myName = "Steve Jobs";
+        _logger.LogInformation("Sample log. My name is {MyName}", myName);
     }
 }
