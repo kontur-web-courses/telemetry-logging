@@ -1,0 +1,368 @@
+2025-11-10 12:11:48.843 +05:00 [FTL] Application start-up failed
+System.IO.InvalidDataException: Failed to load configuration from file 'D:\max_k\Documents\Документы\Учеба\backend\telemetry-logging\appsettings.Development.json'.
+ ---> System.FormatException: Could not parse the JSON file.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationFileParser.ParseStream(Stream input)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.AddSource(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationExtensions.Add[TSource](IConfigurationBuilder builder, Action`1 configureSource)
+   at Microsoft.Extensions.Configuration.JsonConfigurationExtensions.AddJsonFile(IConfigurationBuilder builder, String path, Boolean optional, Boolean reloadOnChange)
+   at Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ApplyDefaultAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder appConfigBuilder, String[] args)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder..ctor(HostApplicationBuilderSettings settings)
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at Program.<Main>$(String[] args) in D:\max_k\Documents\Документы\Учеба\backend\telemetry-logging\Program.cs:line 10
+2025-11-10 13:53:55.642 +05:00 [FTL] Application start-up failed
+System.Exception: Failure to create component template `ecs_9.0.0_agent` for logs-telemetry-logging-*: Invalid Elasticsearch response built from a unsuccessful () low level call on PUT: /_component_template/ecs_9.0.0_agent
+ Exception: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+
+# Audit trail of this API call:
+ - [1] AllNodesDead: Took: 00:00:00.0000043
+ - [2] Resurrection: Node: http://localhost:9200/ Took: 00:00:00.0000004
+ - [3] PingFailure: Node: http://localhost:9200/ Exception: PipelineException Took: 00:00:00.0789246
+# OriginalException: Elastic.Transport.TransportException: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+ ---> Elastic.Transport.PipelineException: Failed to ping the specified node.
+ ---> Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   at Elastic.Transport.TaskExtensions.EnsureCompleted(ValueTask task)
+   at Elastic.Transport.RequestPipeline.Ping(Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.Ping(RequestPipeline pipeline, Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.RequestCoreAsync[TResponse](Boolean isAsync, EndpointPath path, PostData data, Action`1 configureActivity, IRequestConfiguration localConfiguration, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+# Audit exception in step 3 PingFailure:
+Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on TransportConfiguration to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on TransportConfiguration to force it to be set on the response.>
+
+ ---> Elastic.Transport.TransportException: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+ ---> Elastic.Transport.PipelineException: Failed to ping the specified node.
+ ---> Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.Net.Http.HttpIOException: The response ended prematurely. (ResponseEnded)
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   at Elastic.Transport.TaskExtensions.EnsureCompleted(ValueTask task)
+   at Elastic.Transport.RequestPipeline.Ping(Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.Ping(RequestPipeline pipeline, Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.RequestCoreAsync[TResponse](Boolean isAsync, EndpointPath path, PostData data, Action`1 configureActivity, IRequestConfiguration localConfiguration, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at Elastic.Ingest.Elasticsearch.ElasticsearchChannelBase`2.PutComponentTemplate(BootstrapMethod bootstrapMethod, String name, String body)
+   at Elastic.Ingest.Elasticsearch.CommonSchema.EcsDataStreamChannel`1.BootstrapElasticsearch(BootstrapMethod bootstrapMethod, String ilmPolicy)
+   at Elastic.Serilog.Sinks.ElasticsearchSink`1..ctor(ElasticsearchSinkOptions`1 options)
+   at Elastic.Serilog.Sinks.ElasticsearchSink..ctor(ElasticsearchSinkOptions options)
+   at Elastic.Serilog.Sinks.ElasticsearchSinkExtensions.Elasticsearch(LoggerSinkConfiguration loggerConfiguration, ICollection`1 nodes, Action`1 configureOptions, Action`1 configureTransport, Boolean useSniffing, LoggingLevelSwitch levelSwitch, LogEventLevel restrictedToMinimumLevel)
+   at Program.<Main>$(String[] args) in D:\max_k\Documents\Документы\Учеба\backend\telemetry-logging\Program.cs:line 20
+2025-11-10 15:01:16.439 +05:00 [FTL] Application start-up failed
+System.Exception: Failure to create component template `ecs_9.0.0_agent` for logs-telemetry-logging-*: Invalid Elasticsearch response built from a unsuccessful () low level call on PUT: /_component_template/ecs_9.0.0_agent
+ Exception: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+
+# Audit trail of this API call:
+ - [1] AllNodesDead: Took: 00:00:00.0000012
+ - [2] Resurrection: Node: http://localhost:9200/ Took: 00:00:00.0000003
+ - [3] PingFailure: Node: http://localhost:9200/ Exception: PipelineException Took: 00:00:04.1070037
+# OriginalException: Elastic.Transport.TransportException: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+ ---> Elastic.Transport.PipelineException: Failed to ping the specified node.
+ ---> Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:9200)
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellation(CancellationToken cancellationToken)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   at Elastic.Transport.TaskExtensions.EnsureCompleted(ValueTask task)
+   at Elastic.Transport.RequestPipeline.Ping(Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.Ping(RequestPipeline pipeline, Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.RequestCoreAsync[TResponse](Boolean isAsync, EndpointPath path, PostData data, Action`1 configureActivity, IRequestConfiguration localConfiguration, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+# Audit exception in step 3 PingFailure:
+Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:9200)
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellation(CancellationToken cancellationToken)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on TransportConfiguration to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on TransportConfiguration to force it to be set on the response.>
+
+ ---> Elastic.Transport.TransportException: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+ ---> Elastic.Transport.PipelineException: Failed to ping the specified node.
+ ---> Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:9200)
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellation(CancellationToken cancellationToken)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   at Elastic.Transport.TaskExtensions.EnsureCompleted(ValueTask task)
+   at Elastic.Transport.RequestPipeline.Ping(Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.Ping(RequestPipeline pipeline, Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.RequestCoreAsync[TResponse](Boolean isAsync, EndpointPath path, PostData data, Action`1 configureActivity, IRequestConfiguration localConfiguration, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at Elastic.Ingest.Elasticsearch.ElasticsearchChannelBase`2.PutComponentTemplate(BootstrapMethod bootstrapMethod, String name, String body)
+   at Elastic.Ingest.Elasticsearch.CommonSchema.EcsDataStreamChannel`1.BootstrapElasticsearch(BootstrapMethod bootstrapMethod, String ilmPolicy)
+   at Elastic.Serilog.Sinks.ElasticsearchSink`1..ctor(ElasticsearchSinkOptions`1 options)
+   at Elastic.Serilog.Sinks.ElasticsearchSink..ctor(ElasticsearchSinkOptions options)
+   at Elastic.Serilog.Sinks.ElasticsearchSinkExtensions.Elasticsearch(LoggerSinkConfiguration loggerConfiguration, ICollection`1 nodes, Action`1 configureOptions, Action`1 configureTransport, Boolean useSniffing, LoggingLevelSwitch levelSwitch, LogEventLevel restrictedToMinimumLevel)
+   at Program.<Main>$(String[] args) in D:\max_k\Documents\Документы\Учеба\backend\telemetry-logging\Program.cs:line 20
+2025-11-10 15:02:21.306 +05:00 [FTL] Application start-up failed
+System.Exception: Failure to create component template `ecs_9.0.0_agent` for logs-telemetry-logging-*: Invalid Elasticsearch response built from a unsuccessful () low level call on PUT: /_component_template/ecs_9.0.0_agent
+ Exception: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+
+# Audit trail of this API call:
+ - [1] AllNodesDead: Took: 00:00:00.0000025
+ - [2] Resurrection: Node: http://localhost:9200/ Took: 00:00:00.0000009
+ - [3] PingFailure: Node: http://localhost:9200/ Exception: PipelineException Took: 00:00:04.0972139
+# OriginalException: Elastic.Transport.TransportException: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+ ---> Elastic.Transport.PipelineException: Failed to ping the specified node.
+ ---> Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:9200)
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellation(CancellationToken cancellationToken)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   at Elastic.Transport.TaskExtensions.EnsureCompleted(ValueTask task)
+   at Elastic.Transport.RequestPipeline.Ping(Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.Ping(RequestPipeline pipeline, Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.RequestCoreAsync[TResponse](Boolean isAsync, EndpointPath path, PostData data, Action`1 configureActivity, IRequestConfiguration localConfiguration, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+# Audit exception in step 3 PingFailure:
+Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:9200)
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellation(CancellationToken cancellationToken)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+# Request:
+<Request stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on TransportConfiguration to force it to be set on the response.>
+# Response:
+<Response stream not captured or already read to completion by serializer. Set DisableDirectStreaming() on TransportConfiguration to force it to be set on the response.>
+
+ ---> Elastic.Transport.TransportException: Failed to ping the specified node. Call: Status code unknown from: HEAD /
+ ---> Elastic.Transport.PipelineException: Failed to ping the specified node.
+ ---> Elastic.Transport.PipelineException: An error occurred trying to write the request data to the specified node.
+ ---> System.Net.Http.HttpRequestException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:9200)
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellation(CancellationToken cancellationToken)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DecompressionHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpMessageHandlerStage.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.Send(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.Send(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationToken cancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, Endpoint endpoint, BoundConfiguration boundConfiguration, PostData postData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.RequestPipeline.PingCoreAsync(Boolean isAsync, Node node, Auditor auditor, CancellationToken cancellationToken)
+   at Elastic.Transport.TaskExtensions.EnsureCompleted(ValueTask task)
+   at Elastic.Transport.RequestPipeline.Ping(Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.Ping(RequestPipeline pipeline, Node node, Auditor auditor)
+   at Elastic.Transport.DistributedTransport`1.RequestCoreAsync[TResponse](Boolean isAsync, EndpointPath path, PostData data, Action`1 configureActivity, IRequestConfiguration localConfiguration, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   --- End of inner exception stack trace ---
+   at Elastic.Ingest.Elasticsearch.ElasticsearchChannelBase`2.PutComponentTemplate(BootstrapMethod bootstrapMethod, String name, String body)
+   at Elastic.Ingest.Elasticsearch.CommonSchema.EcsDataStreamChannel`1.BootstrapElasticsearch(BootstrapMethod bootstrapMethod, String ilmPolicy)
+   at Elastic.Serilog.Sinks.ElasticsearchSink`1..ctor(ElasticsearchSinkOptions`1 options)
+   at Elastic.Serilog.Sinks.ElasticsearchSink..ctor(ElasticsearchSinkOptions options)
+   at Elastic.Serilog.Sinks.ElasticsearchSinkExtensions.Elasticsearch(LoggerSinkConfiguration loggerConfiguration, ICollection`1 nodes, Action`1 configureOptions, Action`1 configureTransport, Boolean useSniffing, LoggingLevelSwitch levelSwitch, LogEventLevel restrictedToMinimumLevel)
+   at Program.<Main>$(String[] args) in D:\max_k\Documents\Документы\Учеба\backend\telemetry-logging\Program.cs:line 20
