@@ -1,0 +1,36 @@
+2025-11-10 16:13:34.416 +05:00 [INF] User profile is available. Using '/Users/konstantin/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-10 16:13:34.646 +05:00 [INF] Now listening on: http://localhost:5149
+2025-11-10 16:13:34.648 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-10 16:13:34.648 +05:00 [INF] Hosting environment: Development
+2025-11-10 16:13:34.648 +05:00 [INF] Content root path: /Users/konstantin/Documents/University/Programming/back from kontur/telemetry-logging
+2025-11-10 16:13:34.876 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-10 16:13:34.881 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-10 16:13:34.887 +05:00 [INF] Executing endpoint '/Index'
+2025-11-10 16:13:34.903 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-10 16:13:34.910 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-10 16:13:34.910 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-10 16:13:34.913 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-10 16:13:34.913 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-10 16:13:35.093 +05:00 [INF] Executed page /Index in 186.6164ms
+2025-11-10 16:13:35.093 +05:00 [INF] Executed endpoint '/Index'
+2025-11-10 16:13:35.095 +05:00 [INF] HTTP GET / responded 200 in 212.0254 ms
+2025-11-10 16:13:35.098 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 225.4042ms
+2025-11-10 16:13:35.113 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-11-10 16:13:35.113 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - null null
+2025-11-10 16:13:35.123 +05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: '/Users/konstantin/Documents/University/Programming/back from kontur/telemetry-logging/wwwroot/css/site.css'
+2025-11-10 16:13:35.124 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - 200 341 text/css 10.6825ms
+2025-11-10 16:13:35.130 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - null null
+2025-11-10 16:13:35.130 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - null null
+2025-11-10 16:13:35.130 +05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: '/Users/konstantin/Documents/University/Programming/back from kontur/telemetry-logging/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css'
+2025-11-10 16:13:35.131 +05:00 [INF] The file /telemetry.styles.css was not modified
+2025-11-10 16:13:35.132 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - 304 null text/css 1.876ms
+2025-11-10 16:13:35.132 +05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: '/Users/konstantin/Documents/University/Programming/back from kontur/telemetry-logging/wwwroot/js/site.js'
+2025-11-10 16:13:35.132 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - null null
+2025-11-10 16:13:35.132 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - 200 227 text/javascript 2.4194ms
+2025-11-10 16:13:35.132 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - 200 162720 text/css 22.6292ms
+2025-11-10 16:13:35.133 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-11-10 16:13:35.134 +05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: '/Users/konstantin/Documents/University/Programming/back from kontur/telemetry-logging/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js'
+2025-11-10 16:13:35.135 +05:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: '/Users/konstantin/Documents/University/Programming/back from kontur/telemetry-logging/wwwroot/lib/jquery/dist/jquery.min.js'
+2025-11-10 16:13:35.135 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78468 text/javascript 1.8056ms
+2025-11-10 16:13:35.135 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - 200 89501 text/javascript 3.2357ms
+2025-11-10 16:17:00.544 +05:00 [INF] Application is shutting down...
