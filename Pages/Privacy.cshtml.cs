@@ -14,6 +14,8 @@ public class PrivacyModel : PageModel
 
     public void OnGet()
     {
+        var myName = "Артемий и Екатерина";
+        _logger.LogInformation("Sample log. My name is {MyName}", myName);
     }
 }
 
