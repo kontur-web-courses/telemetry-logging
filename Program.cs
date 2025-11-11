@@ -6,9 +6,7 @@ Log.Logger = new LoggerConfiguration()
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.UseSerilog();
-
-builder.Services.AddSerilog((hostingContext, loggerConfiguration) =>
+builder.Host.UseSerilog((hostingContext, loggerConfiguration) =>
     loggerConfiguration.ReadFrom.Configuration(hostingContext.Configuration));
 
 
