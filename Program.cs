@@ -1,7 +1,17 @@
+using Serilog;
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .CreateLogger();
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Host.UseSerilog();
+builder.Services.AddSerilog((_, loggerConfiguration) =>
+    loggerConfiguration.ReadFrom.Configuration(builder.Configuration));
 
 var app = builder.Build();
 
@@ -15,7 +25,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSerilogRequestLogging();
 app.UseRouting();
 
 app.UseAuthorization();
