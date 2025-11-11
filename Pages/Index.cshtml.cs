@@ -14,6 +14,7 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-
+        var myNames = "Топорков Артём, Волков Андрей, Адылов Мурад";
+        _logger.LogInformation("Sample log. My names are {MyNames}", myNames);
     }
 }
