@@ -4,13 +4,14 @@ using Elastic.Ingest.Elasticsearch.DataStreams;
 using Elastic.Serilog.Sinks;
 using Elastic.Transport;
 using Serilog;
-try
-{
-    Log.Logger = new LoggerConfiguration()
+
+Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .WriteTo.File("logs/start-host-log-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
+try
+{
     var builder = WebApplication.CreateBuilder(args);
 
     // Add services to the container.
@@ -64,8 +65,8 @@ try
     app.Run();
 
 }
-catch
+catch (Exception e)
 {
-
+    Log.Logger.Error($"Вознкило исключение: {e.Message}");
 }
 
