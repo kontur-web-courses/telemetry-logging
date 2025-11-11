@@ -1,0 +1,68 @@
+2025-11-11 15:45:26.967 +05:00 [FTL] Application startup failed
+System.IO.InvalidDataException: Failed to load configuration from file '/Users/daniilbutakov/RiderProjects/telemetry-logging/appsettings.Development.json'.
+ ---> System.FormatException: Could not parse the JSON file.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationFileParser.ParseStream(Stream input)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.AddSource(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationExtensions.Add[TSource](IConfigurationBuilder builder, Action`1 configureSource)
+   at Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ApplyDefaultAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder appConfigBuilder, String[] args)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder..ctor(HostApplicationBuilderSettings settings)
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at Program.<Main>$(String[] args) in /Users/daniilbutakov/RiderProjects/telemetry-logging/Program.cs:line 9
+2025-11-11 16:18:07.350 +05:00 [INF] User profile is available. Using '/Users/daniilbutakov/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-11 16:18:07.416 +05:00 [INF] Now listening on: http://localhost:5149
+2025-11-11 16:18:07.417 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-11 16:18:07.418 +05:00 [INF] Hosting environment: Development
+2025-11-11 16:18:07.418 +05:00 [INF] Content root path: /Users/daniilbutakov/RiderProjects/telemetry-logging
+2025-11-11 16:18:07.802 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-11 16:18:07.807 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-11 16:18:07.814 +05:00 [INF] Executing endpoint '/Index'
+2025-11-11 16:18:07.829 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-11 16:18:07.837 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-11 16:18:07.838 +05:00 [INF] Sample log. My name is ААААААА ИМЯЯЯЯЯ
+2025-11-11 16:18:07.838 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-11 16:18:07.840 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-11 16:18:07.841 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-11 16:18:07.916 +05:00 [INF] Executed page /Index in 85.597ms
+2025-11-11 16:18:07.917 +05:00 [INF] Executed endpoint '/Index'
+2025-11-11 16:18:07.918 +05:00 [INF] HTTP GET / responded 200 in 109.6975 ms
+2025-11-11 16:18:07.921 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 118.6569ms
+2025-11-11 16:18:09.329 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-11 16:18:09.330 +05:00 [INF] Executing endpoint '/Index'
+2025-11-11 16:18:09.331 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-11 16:18:09.332 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-11 16:18:09.332 +05:00 [INF] Sample log. My name is ААААААА ИМЯЯЯЯЯ
+2025-11-11 16:18:09.332 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-11 16:18:09.332 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-11 16:18:09.332 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-11 16:18:09.339 +05:00 [INF] Executed page /Index in 8.4141ms
+2025-11-11 16:18:09.340 +05:00 [INF] Executed endpoint '/Index'
+2025-11-11 16:18:09.340 +05:00 [INF] HTTP GET / responded 200 in 9.7844 ms
+2025-11-11 16:18:09.340 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 12.0856ms
+2025-11-11 16:18:09.577 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-11 16:18:09.578 +05:00 [INF] Executing endpoint '/Index'
+2025-11-11 16:18:09.578 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-11 16:18:09.578 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-11 16:18:09.578 +05:00 [INF] Sample log. My name is ААААААА ИМЯЯЯЯЯ
+2025-11-11 16:18:09.578 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-11 16:18:09.578 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-11 16:18:09.578 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-11 16:18:09.580 +05:00 [INF] Executed page /Index in 1.6097ms
+2025-11-11 16:18:09.580 +05:00 [INF] Executed endpoint '/Index'
+2025-11-11 16:18:09.580 +05:00 [INF] HTTP GET / responded 200 in 2.0609 ms
+2025-11-11 16:18:09.580 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 2.9255ms
+2025-11-11 16:19:03.812 +05:00 [INF] Application is shutting down...
