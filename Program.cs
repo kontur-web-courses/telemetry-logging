@@ -1,3 +1,8 @@
+using Elastic.Channels;
+using Elastic.Ingest.Elasticsearch;
+using Elastic.Ingest.Elasticsearch.DataStreams;
+using Elastic.Serilog.Sinks;
+using Elastic.Transport;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -8,22 +13,41 @@ Log.Logger = new LoggerConfiguration()
 try
 {
     var builder = WebApplication.CreateBuilder(args);
-
-    builder.Host.UseSerilog((ctx, lc) => lc
-        .ReadFrom.Configuration(ctx.Configuration)
-        .Enrich.FromLogContext()
-        .WriteTo.Console());
+    builder.Host.UseSerilog();
 
     builder.Services.AddRazorPages();
 
+    builder.Services.AddSerilog((sp, lc) => lc.Enrich.FromLogContext()
+            .WriteTo.Elasticsearch([new("http://localhost:9200")], opts =>
+            {
+                opts.DataStream = new("logs", "telemetry-loggin", "demo");
+                opts.BootstrapMethod = BootstrapMethod.Failure;
+                opts.ConfigureChannel = channelOpts =>
+                {
+                    channelOpts.BufferOptions = new()
+                    {
+                        ExportMaxConcurrency = 10,
+                    };
+                };
+            }, transport =>
+            {
+                transport.Authentication(new BasicAuthentication("elastic", "changeme"));
+                transport.OnRequestCompleted(d => Console.WriteLine($"es-req: {d.DebugInformation}"));
+            })
+            .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
+
+            .ReadFrom.Configuration(sp.GetRequiredService<IConfiguration>())
+        );
+
     var app = builder.Build();
 
+    // Configure the HTTP request pipeline.
     if (!app.Environment.IsDevelopment())
     {
         app.UseExceptionHandler("/Error");
+        // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
         app.UseHsts();
     }
-
     app.UseHttpsRedirection();
     app.UseStaticFiles();
     app.UseSerilogRequestLogging();
@@ -35,10 +59,5 @@ try
 }
 catch (Exception ex)
 {
-    Log.Fatal(ex, "Application start-up failed");
-    Environment.ExitCode = 1;
-}
-finally
-{
-    Log.CloseAndFlush();
+    Log.Error(ex, "Application start exception");
 }
