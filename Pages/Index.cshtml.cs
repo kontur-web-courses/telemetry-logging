@@ -11,9 +11,9 @@ public class IndexModel : PageModel
     {
         _logger = logger;
     }
-
     public void OnGet()
     {
-
+        var myName = "YEP"; // ваше имя
+        _logger.LogInformation("Sample log. My name is {MyName}", myName);
     }
 }
