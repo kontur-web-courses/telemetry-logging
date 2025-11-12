@@ -43,7 +43,7 @@ try
             }, transport =>
             {
                 transport.Authentication(new BasicAuthentication("elastic", "changeme")); // Basic Auth
-                                                                                          // transport.Authentication(new ApiKey(base64EncodedApiKey)); // ApiKey
+                // transport.Authentication(new ApiKey(base64EncodedApiKey)); // ApiKey
                 transport.OnRequestCompleted(d => Console.WriteLine($"es-req: {d.DebugInformation}"));
             })
             .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
