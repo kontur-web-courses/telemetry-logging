@@ -1,0 +1,479 @@
+2025-11-30 19:06:51.861 +05:00 [INF] User profile is available. Using '/Users/sasha/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-30 19:06:51.930 +05:00 [INF] Now listening on: http://localhost:5149
+2025-11-30 19:06:51.931 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-30 19:06:51.931 +05:00 [INF] Hosting environment: Development
+2025-11-30 19:06:51.931 +05:00 [INF] Content root path: /Users/sasha/Desktop/Programming/C#/telemetry-logging
+2025-11-30 19:06:52.621 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:06:52.634 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-30 19:06:52.651 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:06:52.680 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:06:52.691 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:06:52.692 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:06:52.692 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:06:52.695 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:06:52.695 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:06:52.843 +05:00 [INF] Executed page /Index in 155.3494ms
+2025-11-30 19:06:52.848 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:06:52.855 +05:00 [INF] HTTP GET / responded 200 in 213.1877 ms
+2025-11-30 19:06:52.864 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-11-30 19:06:52.865 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 244.8153ms
+2025-11-30 19:06:52.870 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - null null
+2025-11-30 19:06:52.873 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - null null
+2025-11-30 19:06:52.885 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - null null
+2025-11-30 19:06:52.893 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-11-30 19:06:52.895 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - null null
+2025-11-30 19:06:52.897 +05:00 [INF] Sending file. Request path: '/telemetry.styles.css'. Physical path: '/Users/sasha/Desktop/Programming/C#/telemetry-logging/obj/Debug/net8.0/scopedcss/bundle/telemetry.styles.css'
+2025-11-30 19:06:52.898 +05:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: '/Users/sasha/Desktop/Programming/C#/telemetry-logging/wwwroot/css/site.css'
+2025-11-30 19:06:52.899 +05:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: '/Users/sasha/Desktop/Programming/C#/telemetry-logging/wwwroot/js/site.js'
+2025-11-30 19:06:52.900 +05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: '/Users/sasha/Desktop/Programming/C#/telemetry-logging/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js'
+2025-11-30 19:06:52.901 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - 200 1078 text/css 15.982ms
+2025-11-30 19:06:52.908 +05:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: '/Users/sasha/Desktop/Programming/C#/telemetry-logging/wwwroot/lib/jquery/dist/jquery.min.js'
+2025-11-30 19:06:52.908 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - 200 89501 text/javascript 37.7779ms
+2025-11-30 19:06:52.904 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - 200 341 text/css 31.1185ms
+2025-11-30 19:06:52.910 +05:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: '/Users/sasha/Desktop/Programming/C#/telemetry-logging/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css'
+2025-11-30 19:06:52.910 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - 200 162720 text/css 46.9832ms
+2025-11-30 19:06:52.904 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 78468 text/javascript 11.0177ms
+2025-11-30 19:06:52.904 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - 200 227 text/javascript 8.5995ms
+2025-11-30 19:07:10.341 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:07:10.342 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:07:10.343 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:07:10.345 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:07:10.345 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:07:10.346 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:07:10.346 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:07:10.346 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:07:10.352 +05:00 [INF] Executed page /Index in 8.6181ms
+2025-11-30 19:07:10.352 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:07:10.353 +05:00 [INF] HTTP GET / responded 200 in 10.6161 ms
+2025-11-30 19:07:10.353 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 12.0931ms
+2025-11-30 19:07:10.367 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - null null
+2025-11-30 19:07:10.370 +05:00 [INF] The file /telemetry.styles.css was not modified
+2025-11-30 19:07:10.371 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - 304 null text/css 3.101ms
+2025-11-30 19:07:11.561 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:07:11.563 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:07:11.571 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:07:11.572 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:07:11.572 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:07:11.572 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:07:11.572 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:07:11.576 +05:00 [INF] Executed page /Privacy in 4.0359ms
+2025-11-30 19:07:11.576 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:07:11.576 +05:00 [INF] HTTP GET /Privacy responded 200 in 14.5505 ms
+2025-11-30 19:07:11.576 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 15.5244ms
+2025-11-30 19:07:12.877 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:07:12.878 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:07:12.878 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:07:12.879 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:07:12.879 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:07:12.879 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:07:12.880 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:07:12.880 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:07:12.882 +05:00 [INF] Executed page /Index in 3.6366ms
+2025-11-30 19:07:12.883 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:07:12.883 +05:00 [INF] HTTP GET / responded 200 in 5.1006 ms
+2025-11-30 19:07:12.884 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 5.834ms
+2025-11-30 19:13:43.303 +05:00 [INF] Application is shutting down...
+2025-11-30 19:13:45.457 +05:00 [FTL] Application startup failed
+System.IO.InvalidDataException: Failed to load configuration from file '/Users/sasha/Desktop/Programming/C#/telemetry-logging/appsettings.Development.json'.
+ ---> System.FormatException: Could not parse the JSON file.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.JsonDocument.Parse(ReadOnlySpan`1 utf8JsonSpan, JsonReaderOptions readerOptions, MetadataDb& database, StackRowStack& stack)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 utf8Json, JsonReaderOptions readerOptions, Byte[] extraRentedArrayPoolBytes, PooledByteBufferWriter extraPooledByteBufferWriter, Boolean allowDuplicateProperties)
+   at System.Text.Json.JsonDocument.Parse(ReadOnlyMemory`1 json, JsonDocumentOptions options)
+   at System.Text.Json.JsonDocument.Parse(String json, JsonDocumentOptions options)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationFileParser.ParseStream(Stream input)
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.Json.JsonConfigurationProvider.Load(Stream stream)
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.Configuration.FileConfigurationProvider.Load(Boolean reload)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.AddSource(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.ConfigurationSources.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationManager.Microsoft.Extensions.Configuration.IConfigurationBuilder.Add(IConfigurationSource source)
+   at Microsoft.Extensions.Configuration.ConfigurationExtensions.Add[TSource](IConfigurationBuilder builder, Action`1 configureSource)
+   at Microsoft.Extensions.Hosting.HostingHostBuilderExtensions.ApplyDefaultAppConfiguration(HostBuilderContext hostingContext, IConfigurationBuilder appConfigBuilder, String[] args)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder..ctor(HostApplicationBuilderSettings settings)
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder..ctor(WebApplicationOptions options, Action`1 configureDefaults)
+   at Microsoft.AspNetCore.Builder.WebApplication.CreateBuilder(String[] args)
+   at Program.<Main>$(String[] args) in /Users/sasha/Desktop/Programming/C#/telemetry-logging/Program.cs:line 15
+2025-11-30 19:17:19.729 +05:00 [INF] User profile is available. Using '/Users/sasha/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-30 19:17:19.791 +05:00 [INF] Now listening on: http://localhost:5149
+2025-11-30 19:17:19.792 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-30 19:17:19.792 +05:00 [INF] Hosting environment: Development
+2025-11-30 19:17:19.792 +05:00 [INF] Content root path: /Users/sasha/Desktop/Programming/C#/telemetry-logging
+2025-11-30 19:17:20.170 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:17:20.175 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-30 19:17:20.183 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:17:20.202 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:17:20.208 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:17:20.209 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:17:20.209 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:17:20.212 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:17:20.212 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:17:20.417 +05:00 [INF] Executed page /Index in 206.1442ms
+2025-11-30 19:17:20.430 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:17:20.454 +05:00 [INF] HTTP GET / responded 200 in 253.7739 ms
+2025-11-30 19:17:20.490 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 320.9164ms
+2025-11-30 19:17:20.492 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - null null
+2025-11-30 19:17:20.497 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - null null
+2025-11-30 19:17:20.498 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - null null
+2025-11-30 19:17:20.499 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-11-30 19:17:20.522 +05:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-11-30 19:17:20.523 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 31.9223ms
+2025-11-30 19:17:20.523 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - null null
+2025-11-30 19:17:20.521 +05:00 [INF] The file /telemetry.styles.css was not modified
+2025-11-30 19:17:20.526 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-11-30 19:17:20.527 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - 304 null text/css 36.5173ms
+2025-11-30 19:17:20.528 +05:00 [INF] The file /js/site.js was not modified
+2025-11-30 19:17:20.521 +05:00 [INF] The file /css/site.css was not modified
+2025-11-30 19:17:20.520 +05:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-11-30 19:17:20.529 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - 304 null text/javascript 5.5734ms
+2025-11-30 19:17:20.529 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - 304 null text/css 31.8003ms
+2025-11-30 19:17:20.529 +05:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-11-30 19:17:20.530 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - 304 null text/javascript 31.5623ms
+2025-11-30 19:17:20.533 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 6.7088ms
+2025-11-30 19:17:22.178 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:17:22.180 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:17:22.188 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:17:22.189 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:17:22.189 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:17:22.190 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:17:22.190 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:17:22.195 +05:00 [INF] Executed page /Privacy in 7.2095ms
+2025-11-30 19:17:22.195 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:17:22.195 +05:00 [INF] HTTP GET /Privacy responded 200 in 16.9720 ms
+2025-11-30 19:17:22.196 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 17.7026ms
+2025-11-30 19:17:22.734 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:17:22.735 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:17:22.736 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:17:22.736 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:17:22.736 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:17:22.736 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:17:22.737 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:17:22.737 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:17:22.740 +05:00 [INF] Executed page /Index in 4.2855ms
+2025-11-30 19:17:22.740 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:17:22.740 +05:00 [INF] HTTP GET / responded 200 in 5.1604 ms
+2025-11-30 19:17:22.741 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 6.1088ms
+2025-11-30 19:17:23.192 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:17:23.193 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:17:23.193 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:17:23.193 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:17:23.193 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:17:23.193 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:17:23.194 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:17:23.194 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:17:23.196 +05:00 [INF] Executed page /Index in 3.3294ms
+2025-11-30 19:17:23.196 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:17:23.196 +05:00 [INF] HTTP GET / responded 200 in 3.9982 ms
+2025-11-30 19:17:23.197 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 4.8743ms
+2025-11-30 19:17:23.702 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:17:23.703 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:17:23.703 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:17:23.704 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:17:23.704 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:17:23.704 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:17:23.704 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:17:23.706 +05:00 [INF] Executed page /Privacy in 2.6877ms
+2025-11-30 19:17:23.706 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:17:23.706 +05:00 [INF] HTTP GET /Privacy responded 200 in 4.2565 ms
+2025-11-30 19:17:23.707 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 4.7048ms
+2025-11-30 19:21:10.654 +05:00 [INF] Application is shutting down...
+2025-11-30 19:21:12.501 +05:00 [INF] User profile is available. Using '/Users/sasha/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-30 19:21:12.576 +05:00 [INF] Now listening on: http://localhost:5149
+2025-11-30 19:21:12.578 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-30 19:21:12.578 +05:00 [INF] Hosting environment: Development
+2025-11-30 19:21:12.578 +05:00 [INF] Content root path: /Users/sasha/Desktop/Programming/C#/telemetry-logging
+2025-11-30 19:21:13.211 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:21:13.221 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-30 19:21:13.228 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:21:13.242 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:21:13.247 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:21:13.247 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:21:13.247 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:21:13.251 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:21:13.251 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:21:13.339 +05:00 [INF] Executed page /Index in 93.7918ms
+2025-11-30 19:21:13.349 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:21:13.361 +05:00 [INF] HTTP GET / responded 200 in 128.4370 ms
+2025-11-30 19:21:13.367 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - null null
+2025-11-30 19:21:13.368 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - null null
+2025-11-30 19:21:13.370 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-11-30 19:21:13.370 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 162.0425ms
+2025-11-30 19:21:13.370 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - null null
+2025-11-30 19:21:13.372 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-11-30 19:21:13.373 +05:00 [INF] The file /css/site.css was not modified
+2025-11-30 19:21:13.373 +05:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-11-30 19:21:13.380 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 14.1668ms
+2025-11-30 19:21:13.380 +05:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-11-30 19:21:13.385 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - 304 null text/javascript 14.5145ms
+2025-11-30 19:21:13.373 +05:00 [INF] The file /telemetry.styles.css was not modified
+2025-11-30 19:21:13.390 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - 304 null text/css 21.4458ms
+2025-11-30 19:21:13.374 +05:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-11-30 19:21:13.373 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - 304 null text/css 7.9908ms
+2025-11-30 19:21:13.396 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 23.7578ms
+2025-11-30 19:21:13.384 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - null null
+2025-11-30 19:21:13.403 +05:00 [INF] The file /js/site.js was not modified
+2025-11-30 19:21:13.403 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - 304 null text/javascript 19.04ms
+2025-11-30 19:21:14.492 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:21:14.495 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:21:14.499 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:21:14.500 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:21:14.501 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:21:14.501 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:21:14.501 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:21:14.508 +05:00 [INF] Executed page /Privacy in 8.7583ms
+2025-11-30 19:21:14.508 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:21:14.508 +05:00 [INF] HTTP GET /Privacy responded 200 in 15.7028 ms
+2025-11-30 19:21:14.508 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 16.5949ms
+2025-11-30 19:21:14.972 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:21:14.972 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:21:14.972 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:21:14.973 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:21:14.973 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:21:14.973 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:21:14.973 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:21:14.973 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:21:14.975 +05:00 [INF] Executed page /Index in 2.4776ms
+2025-11-30 19:21:14.975 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:21:14.975 +05:00 [INF] HTTP GET / responded 200 in 3.1313 ms
+2025-11-30 19:21:14.975 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 3.653ms
+2025-11-30 19:21:15.495 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:21:15.496 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:21:15.496 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:21:15.496 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:21:15.496 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:21:15.496 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:21:15.497 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:21:15.497 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:21:15.498 +05:00 [INF] Executed page /Index in 2.3995ms
+2025-11-30 19:21:15.499 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:21:15.499 +05:00 [INF] HTTP GET / responded 200 in 3.1409 ms
+2025-11-30 19:21:15.499 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 3.7046ms
+2025-11-30 19:21:16.001 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:21:16.002 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:21:16.002 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:21:16.002 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:21:16.002 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:21:16.002 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:21:16.002 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:21:16.003 +05:00 [INF] Executed page /Privacy in 1.0677ms
+2025-11-30 19:21:16.003 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:21:16.003 +05:00 [INF] HTTP GET /Privacy responded 200 in 1.9360 ms
+2025-11-30 19:21:16.003 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 2.2389ms
+2025-11-30 19:21:16.472 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:21:16.472 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:21:16.473 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:21:16.473 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:21:16.473 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:21:16.473 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:21:16.473 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:21:16.473 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:21:16.474 +05:00 [INF] Executed page /Index in 1.0881ms
+2025-11-30 19:21:16.474 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:21:16.474 +05:00 [INF] HTTP GET / responded 200 in 1.5137 ms
+2025-11-30 19:21:16.474 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 1.8693ms
+2025-11-30 19:23:38.055 +05:00 [INF] Application is shutting down...
+2025-11-30 19:26:50.276 +05:00 [INF] User profile is available. Using '/Users/sasha/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-30 19:26:50.338 +05:00 [INF] Now listening on: http://localhost:5149
+2025-11-30 19:26:50.339 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-30 19:26:50.339 +05:00 [INF] Hosting environment: Development
+2025-11-30 19:26:50.339 +05:00 [INF] Content root path: /Users/sasha/Desktop/Programming/C#/telemetry-logging
+2025-11-30 19:26:50.910 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:26:50.927 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-30 19:26:50.936 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:26:50.971 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:26:50.977 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:26:50.978 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:26:50.978 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:26:50.980 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:26:50.980 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:26:51.086 +05:00 [INF] Executed page /Index in 109.1876ms
+2025-11-30 19:26:51.095 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:26:51.103 +05:00 [INF] HTTP GET / responded 200 in 166.7277 ms
+2025-11-30 19:26:51.120 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - null null
+2025-11-30 19:26:51.121 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 212.3082ms
+2025-11-30 19:26:51.120 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-11-30 19:26:51.133 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - null null
+2025-11-30 19:26:51.140 +05:00 [INF] The file /css/site.css was not modified
+2025-11-30 19:26:51.140 +05:00 [INF] The file /telemetry.styles.css was not modified
+2025-11-30 19:26:51.140 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - 304 null text/css 21.1537ms
+2025-11-30 19:26:51.141 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - 304 null text/css 7.2585ms
+2025-11-30 19:26:51.145 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - null null
+2025-11-30 19:26:51.160 +05:00 [INF] The file /js/site.js was not modified
+2025-11-30 19:26:51.160 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - 304 null text/javascript 15.4889ms
+2025-11-30 19:26:51.142 +05:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-11-30 19:26:51.152 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - null null
+2025-11-30 19:26:51.134 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-11-30 19:26:51.194 +05:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-11-30 19:26:51.195 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 60.0761ms
+2025-11-30 19:26:51.181 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 60.6922ms
+2025-11-30 19:26:51.193 +05:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-11-30 19:26:51.200 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - 304 null text/javascript 48.3271ms
+2025-11-30 19:26:52.297 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:26:52.300 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:26:52.302 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:26:52.303 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:26:52.303 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:26:52.303 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:26:52.303 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:26:52.307 +05:00 [INF] Executed page /Privacy in 4.6025ms
+2025-11-30 19:26:52.307 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:26:52.307 +05:00 [INF] HTTP GET /Privacy responded 200 in 9.5236 ms
+2025-11-30 19:26:52.307 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 10.3776ms
+2025-11-30 19:26:53.254 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:26:53.255 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:26:53.255 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:26:53.256 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:26:53.257 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:26:53.257 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:26:53.257 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:26:53.257 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:26:53.260 +05:00 [INF] Executed page /Index in 4.845ms
+2025-11-30 19:26:53.261 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:26:53.261 +05:00 [INF] HTTP GET / responded 200 in 6.0062 ms
+2025-11-30 19:26:53.261 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 6.951ms
+2025-11-30 19:26:53.740 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:26:53.740 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:26:53.740 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:26:53.741 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:26:53.741 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:26:53.741 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:26:53.741 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:26:53.741 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:26:53.742 +05:00 [INF] Executed page /Index in 1.974ms
+2025-11-30 19:26:53.742 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:26:53.742 +05:00 [INF] HTTP GET / responded 200 in 2.4285 ms
+2025-11-30 19:26:53.742 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 2.8615ms
+2025-11-30 19:26:54.325 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:26:54.326 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:26:54.326 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:26:54.327 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:26:54.327 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:26:54.327 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:26:54.327 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:26:54.328 +05:00 [INF] Executed page /Privacy in 1.8623ms
+2025-11-30 19:26:54.328 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:26:54.329 +05:00 [INF] HTTP GET /Privacy responded 200 in 3.2138 ms
+2025-11-30 19:26:54.329 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 3.6472ms
+2025-11-30 19:29:56.536 +05:00 [INF] Application is shutting down...
+2025-11-30 19:29:58.744 +05:00 [INF] User profile is available. Using '/Users/sasha/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-30 19:29:58.803 +05:00 [INF] Now listening on: http://localhost:5149
+2025-11-30 19:29:58.804 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-30 19:29:58.804 +05:00 [INF] Hosting environment: Development
+2025-11-30 19:29:58.804 +05:00 [INF] Content root path: /Users/sasha/Desktop/Programming/C#/telemetry-logging
+2025-11-30 19:29:59.574 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:29:59.584 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-30 19:29:59.592 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:29:59.609 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:29:59.632 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:29:59.633 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:29:59.633 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:29:59.635 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:29:59.635 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:29:59.721 +05:00 [INF] Executed page /Index in 105.1722ms
+2025-11-30 19:29:59.725 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:29:59.729 +05:00 [INF] HTTP GET / responded 200 in 140.9991 ms
+2025-11-30 19:29:59.738 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 163.4087ms
+2025-11-30 19:29:59.743 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - null null
+2025-11-30 19:29:59.751 +05:00 [INF] The file /telemetry.styles.css was not modified
+2025-11-30 19:29:59.752 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - 304 null text/css 9.6297ms
+2025-11-30 19:30:01.007 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:30:01.009 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:30:01.012 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:30:01.013 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:30:01.014 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:30:01.014 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:30:01.014 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:30:01.018 +05:00 [INF] Executed page /Privacy in 6.075ms
+2025-11-30 19:30:01.019 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:30:01.019 +05:00 [INF] HTTP GET /Privacy responded 200 in 11.7283 ms
+2025-11-30 19:30:01.020 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 13.5175ms
+2025-11-30 19:30:01.494 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:30:01.495 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:30:01.495 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:30:01.496 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:30:01.496 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:30:01.496 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:30:01.497 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:30:01.497 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:30:01.499 +05:00 [INF] Executed page /Index in 3.4057ms
+2025-11-30 19:30:01.499 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:30:01.499 +05:00 [INF] HTTP GET / responded 200 in 4.5928 ms
+2025-11-30 19:30:01.500 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 5.3484ms
+2025-11-30 19:30:01.967 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:30:01.968 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:30:01.968 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:30:01.968 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:30:01.968 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:30:01.969 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:30:01.969 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:30:01.969 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:30:01.970 +05:00 [INF] Executed page /Index in 2.0549ms
+2025-11-30 19:30:01.970 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:30:01.970 +05:00 [INF] HTTP GET / responded 200 in 2.6067 ms
+2025-11-30 19:30:01.970 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 3.0537ms
+2025-11-30 19:30:02.435 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:30:02.435 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:30:02.436 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:30:02.436 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:30:02.436 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:30:02.437 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:30:02.437 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:30:02.437 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:30:02.438 +05:00 [INF] Executed page /Index in 1.937ms
+2025-11-30 19:30:02.438 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:30:02.438 +05:00 [INF] HTTP GET / responded 200 in 2.8155 ms
+2025-11-30 19:30:02.438 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 3.4173ms
+2025-11-30 19:36:53.618 +05:00 [INF] Application is shutting down...
+2025-11-30 19:36:55.617 +05:00 [INF] User profile is available. Using '/Users/sasha/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-11-30 19:36:55.676 +05:00 [INF] Now listening on: http://localhost:5149
+2025-11-30 19:36:55.677 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-30 19:36:55.678 +05:00 [INF] Hosting environment: Development
+2025-11-30 19:36:55.678 +05:00 [INF] Content root path: /Users/sasha/Desktop/Programming/C#/telemetry-logging
+2025-11-30 19:36:56.398 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2025-11-30 19:36:56.403 +05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-30 19:36:56.410 +05:00 [INF] Executing endpoint '/Index'
+2025-11-30 19:36:56.428 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2025-11-30 19:36:56.448 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-11-30 19:36:56.449 +05:00 [INF] Sample log. My name is 1337lega
+2025-11-30 19:36:56.449 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:36:56.454 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:36:56.454 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:36:56.553 +05:00 [INF] Executed page /Index in 120.8416ms
+2025-11-30 19:36:56.560 +05:00 [INF] Executed endpoint '/Index'
+2025-11-30 19:36:56.579 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-11-30 19:36:56.581 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - null null
+2025-11-30 19:36:56.582 +05:00 [INF] HTTP GET / responded 200 in 156.4570 ms
+2025-11-30 19:36:56.580 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - null null
+2025-11-30 19:36:56.590 +05:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-11-30 19:36:56.595 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - null null
+2025-11-30 19:36:56.589 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-11-30 19:36:56.596 +05:00 [INF] The file /telemetry.styles.css was not modified
+2025-11-30 19:36:56.590 +05:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-11-30 19:36:56.596 +05:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-11-30 19:36:56.597 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 19.4295ms
+2025-11-30 19:36:56.599 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=q9KPhIEggrils0hp_zv1hbqEv07jyK0hk6hUp0l2hng - 304 null text/css 3.0162ms
+2025-11-30 19:36:56.603 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 206.1806ms
+2025-11-30 19:36:56.592 +05:00 [INF] The file /css/site.css was not modified
+2025-11-30 19:36:56.600 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - 304 null text/javascript 22.8341ms
+2025-11-30 19:36:56.604 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - 304 null text/css 24.4633ms
+2025-11-30 19:36:56.600 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 11.3509ms
+2025-11-30 19:36:56.604 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - null null
+2025-11-30 19:36:56.610 +05:00 [INF] The file /js/site.js was not modified
+2025-11-30 19:36:56.611 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - 304 null text/javascript 6.714ms
+2025-11-30 19:36:58.232 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/Privacy - null null
+2025-11-30 19:36:58.236 +05:00 [INF] Executing endpoint '/Privacy'
+2025-11-30 19:36:58.240 +05:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2025-11-30 19:36:58.241 +05:00 [INF] Executing handler method telemetry.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2025-11-30 19:36:58.242 +05:00 [INF] Executed handler method OnGet, returned result .
+2025-11-30 19:36:58.242 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-11-30 19:36:58.242 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-11-30 19:36:58.248 +05:00 [INF] Executed page /Privacy in 7.4141ms
+2025-11-30 19:36:58.248 +05:00 [INF] Executed endpoint '/Privacy'
+2025-11-30 19:36:58.248 +05:00 [INF] HTTP GET /Privacy responded 200 in 14.7179 ms
+2025-11-30 19:36:58.248 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/Privacy - 200 null text/html; charset=utf-8 16.053ms
+2025-11-30 19:40:45.893 +05:00 [INF] Application is shutting down...
