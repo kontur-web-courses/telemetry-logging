@@ -6,4 +6,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="4.*" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.*" />
+    <PackageReference Include="Serilog.Enrichers.Environment" Version="2.*" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="2.*" />
+    <PackageReference Include="Elastic.Serilog.Sinks" Version="8.*" />
+  </ItemGroup>
+
 </Project>
