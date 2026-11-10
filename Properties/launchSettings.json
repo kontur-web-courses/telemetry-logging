@@ -6,6 +6,13 @@
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5149",
       "environmentVariables": {
+        "environmentVariables": {
+          "ASPNETCORE_ENVIRONMENT": "Development",
+          "OTEL_SERVICE_NAME": "TelemetryLogging",
+          "OTEL_EXPORTER_OTLP_ENDPOINT": "https://fiit-backend-telemetry.duckdns.org",
+          "OTEL_EXPORTER_OTLP_PROTOCOL": "http/protobuf",
+          "OTEL_EXPORTER_OTLP_HEADERS": "Authorization=Basic c3R1ZGVudHM6YThiMzI3NjAwOTc0N2Q0MjBjNTYxMGUwZGMxNmUzMGRkZDAxOTE2MmU0YWU1ZGYy"
+        },
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
