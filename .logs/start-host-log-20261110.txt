@@ -1,0 +1,44 @@
+2026-11-10 09:42:14.418 +05:00 [ERR] Failed to load configuration from file 'C:\Users\IVAN\Downloads\kontur-telemetry-logging\appsettings.Development.json'.
+2026-11-10 09:44:19.361 +05:00 [ERR] Failed to load configuration from file 'C:\Users\IVAN\Downloads\kontur-telemetry-logging\appsettings.Development.json'.
+2026-11-10 10:28:23.102 +05:00 [INF] User profile is available. Using 'C:\Users\IVAN\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-11-10 10:28:23.205 +05:00 [INF] Now listening on: http://localhost:5149
+2026-11-10 10:28:23.233 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-11-10 10:28:23.234 +05:00 [INF] Hosting environment: Development
+2026-11-10 10:28:23.235 +05:00 [INF] Content root path: C:\Users\IVAN\Downloads\kontur-telemetry-logging
+2026-11-10 10:28:24.472 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/ - null null
+2026-11-10 10:28:24.532 +05:00 [WRN] Failed to determine the https port for redirect.
+2026-11-10 10:28:24.539 +05:00 [INF] Executing endpoint '/Index'
+2026-11-10 10:28:24.561 +05:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2026-11-10 10:28:24.566 +05:00 [INF] Executing handler method telemetry.Pages.IndexModel.OnGet - ModelState is "Valid"
+2026-11-10 10:28:24.570 +05:00 [INF] Executed handler method OnGet, returned result .
+2026-11-10 10:28:24.573 +05:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-11-10 10:28:24.574 +05:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-11-10 10:28:24.625 +05:00 [INF] Executed page /Index in 61.8382ms
+2026-11-10 10:28:24.627 +05:00 [INF] Executed endpoint '/Index'
+2026-11-10 10:28:24.629 +05:00 [INF] HTTP GET / responded 200 in 94.9041 ms
+2026-11-10 10:28:24.634 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/ - 200 null text/html; charset=utf-8 167.6414ms
+2026-11-10 10:28:24.666 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-11-10 10:28:24.666 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-11-10 10:28:24.666 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=JPazqqVoIjS2qKS4khFVRFZIFbP6sFOwUp0ZH02AN54 - null null
+2026-11-10 10:28:24.667 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/_framework/aspnetcore-browser-refresh.js - null null
+2026-11-10 10:28:24.666 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - null null
+2026-11-10 10:28:24.666 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - null null
+2026-11-10 10:28:24.671 +05:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2026-11-10 10:28:24.671 +05:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2026-11-10 10:28:24.672 +05:00 [INF] The file /telemetry.styles.css was not modified
+2026-11-10 10:28:24.676 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/_framework/aspnetcore-browser-refresh.js - 200 14923 application/javascript; charset=utf-8 8.9115ms
+2026-11-10 10:28:24.679 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 13.1884ms
+2026-11-10 10:28:24.681 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/telemetry.styles.css?v=JPazqqVoIjS2qKS4khFVRFZIFbP6sFOwUp0ZH02AN54 - 304 null text/css 14.8579ms
+2026-11-10 10:28:24.676 +05:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2026-11-10 10:28:24.687 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - null null
+2026-11-10 10:28:24.678 +05:00 [INF] The file /css/site.css was not modified
+2026-11-10 10:28:24.680 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 15.1169ms
+2026-11-10 10:28:24.690 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/lib/jquery/dist/jquery.min.js - 304 null text/javascript 25.0436ms
+2026-11-10 10:28:24.692 +05:00 [INF] The file /js/site.js was not modified
+2026-11-10 10:28:24.693 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/css/site.css?v=r22M7xOahcMheWCkoVof2Nt7pQmj7mMSFKTei-SfmQ0 - 304 null text/css 27.7551ms
+2026-11-10 10:28:24.696 +05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5149/_vs/browserLink - null null
+2026-11-10 10:28:24.699 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/js/site.js?v=y_Ngd8W21UpuCUhEqGbUKDEqFnNfTjAfb24GhJJGUyM - 304 null text/javascript 11.7738ms
+2026-11-10 10:28:24.722 +05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5149/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.812ms
+2026-11-10 10:29:35.536 +05:00 [ERR] The service collection cannot be modified because it is read-only.
+2026-11-10 10:30:13.864 +05:00 [ERR] The service collection cannot be modified because it is read-only.
+2026-11-10 11:08:17.112 +05:00 [ERR] Unable to resolve service for type 'Serilog.Extensions.Hosting.DiagnosticContext' while attempting to activate 'Serilog.AspNetCore.RequestLoggingMiddleware'.

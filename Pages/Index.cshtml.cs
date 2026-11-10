@@ -6,6 +6,7 @@ namespace telemetry.Pages;
 public class IndexModel : PageModel
 {
     private readonly ILogger<IndexModel> _logger;
+    private readonly string myName = "ABOBA";
 
     public IndexModel(ILogger<IndexModel> logger)
     {
@@ -14,6 +15,6 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-
+        _logger.LogInformation("MY SPIDOMETER IS {myName}", myName);
     }
 }
