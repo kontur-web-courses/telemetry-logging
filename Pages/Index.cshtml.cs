@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace telemetry.Pages;
@@ -14,6 +13,7 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-
+        var myName = "Vladislav";
+        _logger.LogInformation("Sample log. My name is {MyName}", myName);
     }
 }
