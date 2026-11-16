@@ -14,6 +14,7 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-
+        const string myName = "Telemetry demo";
+        _logger.LogInformation("Sample log. My name is {MyName}", myName);
     }
 }
